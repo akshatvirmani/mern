@@ -1,0 +1,32 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start":"node index.js",
+    "client": "npm start --prefix client",
+    "clientInstall": "npm install --prefix client",
+    "build":"npm run build --prefix client",
+    "heroku-postbuild":"npm run clientInstall && npm run build",
+    "dev": "concurrently \" npm run server \" \" npm run client \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.2.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.1",
+    "formidable": "^2.0.1",
+    "html-to-text": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16",
+    "uuid": "^8.3.2"
+  }
+}
